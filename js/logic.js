@@ -118,11 +118,11 @@ function createMap(earthquakes) {
         labels = [];
 
     div.innerHTML += "<h4 style='margin:4px'>Magnitude</h4>"
-
+    
     for (var i = 0; i < magnitude.length; i++) {
         div.innerHTML +=
-            '<i style="background:' + color(magnitude[i] + 1) + '"></i> ' +
-            magnitude[i] + (magnitude[i + 1] ? '&ndash;' + magnitude[i + 1] + '<br>' : '+');
+            '<span style="background:' + color(magnitude[i] + 1) + '"></i> ' +
+            magnitude[i] + (magnitude[i + 1] ? '&ndash;' + magnitude[i + 1] + '<br>' : '+') + '</span>';
     }
     return div;
     };
